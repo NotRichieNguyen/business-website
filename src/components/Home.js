@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Home = () => {
+function Home() {
     return (
         <div>
         <h1>Welcome to Trendi Nails</h1>
