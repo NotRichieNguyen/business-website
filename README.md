@@ -78,3 +78,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### `npm install react-bootstrap`
 
 ### `npm install react-router-dom`
+
+### Config git username and password
+
+### `git config --global user.name "your_username"`
+
+### `git config --global user.email "your_email@example.com"`
+
+### `git config --global credential.helper store`
