@@ -1,21 +1,38 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 function NavigationBar() {
-    return (
-    <Navbar bg="light" expand="lg">
-        <Navbar.Brand as={Link} to="/">Trendi Nails</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="ml-auto">
-            <Nav.Link as={Link} to="/services">Services</Nav.Link>
-            <Nav.Link as={Link} to="/about">About Us</Nav.Link>
-            <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-        </Nav>
-        </Navbar.Collapse>
-    </Navbar>
-    );
-};
+return (
+<nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <div className="container-fluid">
+    <Link className="navbar-brand" to="/">Navbar</Link>
+    <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span className="navbar-toggler-icon"></span>
+    </button>
+    <div className="collapse navbar-collapse" id="navbarNav">
+        <ul className="navbar-nav">
+        <li className="nav-item">
+            <Link className="nav-link" to="/">Home</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to="/about">About</Link>
+        </li>
+        <li className="nav-item">
+            <Link className="nav-link" to="/contact">Contact</Link>
+        </li>
+        </ul>
+    </div>
+    </div>
+</nav>
+);
+}
 
 export default NavigationBar;
