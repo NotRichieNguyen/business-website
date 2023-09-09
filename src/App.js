@@ -1,23 +1,22 @@
 import React from 'react';
-import './App.css';
-import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import NavigationBar from './components/Navbar';
-import Home from './components/Home.js';
-import About from './components/About.js';
-import Contact from './components/Contact.js';
+import Home from './components/Home';
+import About from './components/About';
+import Contact from './components/Contact';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <NavigationBar />
-            <Routes>
-                <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
-                <Route path="/contact" component={Contact} />
-                {/* Add 
-                more routes as needed */}
-            </Routes>
+        <div className="container mt-4">
+          <Routes>
+            <Route exact path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
       </div>
     </Router>
   );
