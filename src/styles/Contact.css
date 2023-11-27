@@ -1,0 +1,127 @@
+.container-mt-4 {
+  height: 1500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 75px;
+}
+
+.social-media-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 20%;
+  margin-bottom: 40px;
+}
+
+.instagram-icon,
+.facebook-icon,
+.yelp-icon {
+  height: 50px;
+  mix-blend-mode: multiply;
+}
+
+.contact-info-container {
+  width: 80%;
+  height: 220px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.contact-info-container-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 80%;
+}
+
+.contact-info-container-left-1 {
+  font-size: calc(1rem + 1.5vw);
+  margin-bottom: 12px;
+}
+
+.contact-info-container-left-2 {
+  width: 100%;
+}
+
+.contact-info-container-left-3 {
+  width: 400px;
+  padding-left: 8px;
+}
+
+.contact-info-container-left-4 {
+  padding-left: 5px;
+}
+
+.pinpoint {
+  width: 30px;
+  border-radius: 50px;
+  margin-bottom: 5px;
+  margin-right: 2px;
+  mix-blend-mode: multiply;
+}
+
+.phone {
+  width: 20px;
+  border-radius: 50px;
+  margin-bottom: 5px;
+  margin-right: 7px;
+  mix-blend-mode: multiply;
+}
+
+.mail {
+  width: 25px;
+  margin-right: 7px;
+  mix-blend-mode: multiply;
+}
+
+.contact-info-container-left-2,
+.contact-info-container-left-3,
+.contact-info-container-left-4,
+.contact-info-container-right-2,
+.contact-info-container-right-3 {
+  font-size: calc(0.4rem + 0.8vw);
+}
+
+.contact-info-container-right {
+  margin-top: 5px;
+  margin-right: 55px;
+  margin-left: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 60%;
+}
+
+.contact-info-container-right-1 {
+  font-size: calc(1rem + 1.5vw);
+  margin-bottom: 12px;
+}
+
+.map {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1400px;
+  height: 40%;
+}
+
+.end {
+  width: 2000px;
+  height: 500px;
+}

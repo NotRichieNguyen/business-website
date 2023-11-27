@@ -1,11 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import '../styles/NavBar.css';
+import logo from '../images/trendi-logo.jpg'
 function NavigationBar() {
 return (
-<nav className="navbar navbar-expand-lg bg-body-tertiary">
+<nav className="navbar navbar-expand-lg bg-body-tertiary" style={{ backgroundColor: 'black' }}>
+
     <div className="container-fluid">
-    <Link className="navbar-brand" to="/">Trendi Nails & Facial</Link>
+    
+    <Link className="navbar-brand" to="/"><img src={logo} className="navbar-brand" alt="logo"/></Link>
     <button
         className="navbar-toggler"
         type="button"

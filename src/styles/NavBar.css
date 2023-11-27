@@ -1,0 +1,34 @@
+.container-fluid {
+  background-color: rgba(0, 0, 0, 0.211);
+}
+
+.navbar-brand {
+  border-radius: 150px;
+}
+
+.navbar .nav-link {
+  color: white !important;
+}
+
+.navbar .nav-link:hover {
+  color: #ffd700 !important;
+}
+
+.navbar {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.container {
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.navbar.navbar-expand-lg.bg-body-tertiary {
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.988
+  ) !important; /* Replace with your desired color */
+}
