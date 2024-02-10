@@ -41,7 +41,7 @@ function About() {
           <div className="about-right-container">
             <div className="about-pic1-container">
               <img src={aboutpic1} alt="pic1" className="about-pic1" />
-              {/* <img src={aboutpic3} alt="pic3" className="about-pic1" /> */}
+              
             </div>
             <div className="about-pic2-container">
               <img src={aboutpic2} alt="pic2" className="about-pic2" />

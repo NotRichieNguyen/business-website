@@ -1,5 +1,5 @@
 .contact-container-1 {
-  position: relative !important; /* Container for the absolute elements */
+  position: relative !important;
   min-height: 55vh;
   background-image: url("../images/test4.avif");
   background-size: cover;
@@ -44,9 +44,9 @@
 }
 
 .contact-divider {
-  width: 40px; /* Adjust width as necessary */
-  border: 2px solid #fc9f00; /* This sets the color of the line */
-  margin: 20px 0; /* Adjust spacing around the horizontal line */
+  width: 40px;
+  border: 2px solid #fc9f00;
+  margin: 20px 0;
 }
 
 .contact-top,

@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/Contact.css"; // Import your CSS file
+import "../styles/Contact.css"; 
 import End from "./End";
 import GoogleMap from "./GoogleMaps";
 import facebook from "../images/facebook.jpg";

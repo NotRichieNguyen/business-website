@@ -1,5 +1,5 @@
 .booking-container-1 {
-  position: relative !important; /* Container for the absolute elements */
+  position: relative !important;
   min-height: 55vh;
   background-image: url("../images/services.avif");
   background-size: cover;
@@ -34,8 +34,8 @@
 
 .authorize,
 .signout {
-  padding: 20px 30px; /* Adjust padding as needed for sizing */
-  background-color: #dea43e; /* Adjust the color to match your design */
+  padding: 20px 30px;
+  background-color: #dea43e;
   border: none;
   color: #fff;
   font-weight: bold;
@@ -49,5 +49,5 @@
 
 .authorize:hover,
 .signout:hover {
-  background-color: rgb(240, 201, 134); /* Darker shade for hover effect */
+  background-color: rgb(240, 201, 134);
 }

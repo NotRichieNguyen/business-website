@@ -2,14 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../styles/GoogleMaps.css';
 
-// Define the Google address here
 const googleAddress = '5429 Bellaire Blvd a, Bellaire, TX 77401';
 
 function GoogleMap() {
   const [coordinates, setCoordinates] = useState(null);
 
   useEffect(() => {
-    // Fetch the coordinates for the address using the Geocoding API
+    
     async function fetchCoordinates() {
       try {
         const response = await axios.get(
@@ -30,7 +29,7 @@ function GoogleMap() {
 
   useEffect(() => {
     if (coordinates) {
-      // Initialize and display the map using the provided initMap function
+      
       function initMap() {
         const map = new window.google.maps.Map(document.getElementById('map'), {
           center: coordinates,
@@ -44,7 +43,7 @@ function GoogleMap() {
         });
       }
 
-      // Ensure the Google Maps API script has loaded
+      
       if (window.google) {
         initMap();
       }

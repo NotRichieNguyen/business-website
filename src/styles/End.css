@@ -2,7 +2,7 @@
   background-color: rgb(44, 42, 42);
   min-height: 52vh;
   width: 100%;
-  position: relative !important; /* Container for the absolute elements */
+  position: relative !important;
   background-image: url("../images/endbackground.webp");
   background-size: cover;
   background-position: center;
@@ -19,12 +19,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(12, 12, 12, 0.75); /* Black with 50% opacity */
-  pointer-events: none; /* Allows clicks to pass through to elements underneath */
+  background-color: rgba(12, 12, 12, 0.75);
+  pointer-events: none;
 }
 
 .end-container > * {
-  position: relative; /* Ensures that text and other content is layered above the pseudo-element */
+  position: relative;
 }
 
 .end-top {

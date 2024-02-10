@@ -1,5 +1,5 @@
 .container-1 {
-  position: relative !important; /* Container for the absolute elements */
+  position: relative !important;
   min-height: 55vh;
   background-image: url("../images/test10.avif");
   background-size: cover;
@@ -54,9 +54,9 @@
 }
 
 .left-divider {
-  width: 40px; /* Adjust width as necessary */
-  border: 2px solid #fc9f00; /* This sets the color of the line */
-  margin: 20px 0; /* Adjust spacing around the horizontal line */
+  width: 40px;
+  border: 2px solid #fc9f00;
+  margin: 20px 0;
 }
 
 .about-description {
@@ -68,8 +68,8 @@
   font-family: "Raleway", sans-serif;
   line-height: 25px;
   color: black;
-  text-align: center; /* Center text horizontally */
-  padding: 0 20px; /* Add padding if you want some space on the sides */
+  text-align: center;
+  padding: 0 20px;
 }
 
 .about-root {

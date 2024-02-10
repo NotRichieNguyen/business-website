@@ -32,7 +32,7 @@ const Booking = () => {
     if (window.gapi) {
       listUpcomingEvents();
     } else {
-      window.addEventListener("gapiLoaded", listUpcomingEvents); // Custom event when gapi is loaded
+      window.addEventListener("gapiLoaded", listUpcomingEvents); 
       return () => window.removeEventListener("gapiLoaded", listUpcomingEvents);
     }
 
@@ -70,7 +70,7 @@ const Booking = () => {
           throw response;
         }
         setIsSignedOut(false);
-        // Call your method to list events or handle the signed-in state here
+
       },
     });
     setIsAuthorized(true);
@@ -90,7 +90,7 @@ const Booking = () => {
     if (token !== null) {
       window.google.accounts.oauth2.revoke(token.access_token, () => {
         console.log("Token revoked");
-        window.gapi.client.setToken(null); // Clear the token in gapi client
+        window.gapi.client.setToken(null); 
         setIsSignedOut(true);
         setIsAuthorized(false);
         setContent("");
@@ -98,7 +98,6 @@ const Booking = () => {
     }
   };
 
-  // Define other functions you need, such as listUpcomingEvents, here.
   const listUpcomingEvents = async () => {
     try {
       const request = {
@@ -116,10 +115,9 @@ const Booking = () => {
         return;
       }
 
-      // Store events in state if needed for other purposes
       setEvents(events);
 
-      // Format and display events
+
       const formattedEvents = events.reduce(
         (str, event) =>
           `${str}${event.summary} (${event.start.dateTime || event.start.date})\n`,

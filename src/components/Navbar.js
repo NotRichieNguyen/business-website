@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
-import "../styles/NavBar.css"; // Import your CSS file for styles
+import { NavLink } from "react-router-dom"; 
+import "../styles/NavBar.css"; 
 import trendiLogo from "../images/trendi.png";
 
 function Navbar() {
