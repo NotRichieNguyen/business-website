@@ -1,0 +1,511 @@
+.full-background {
+  position: relative !important; /* Container for the absolute elements */
+  min-height: 100vh;
+  background-image: url("../images/homepic2.png");
+  background-size: cover;
+  background-position: 100% 78%;
+  background-repeat: no-repeat;
+  margin: 0;
+}
+
+.content {
+  /* Styles for your content, such as padding, positioning, etc. */
+  padding: 20px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 2%;
+  width: 10%;
+}
+.logo {
+  border-radius: 300px;
+  width: 100%;
+}
+
+.header {
+  font-family: lustria;
+  font-size: 3rem;
+  line-height: 4rem;
+  color: #fff;
+  font-weight: 400;
+  top: 21%; /* Adjust if you want to move it down */
+  right: 8%; /* Align to the right side of the viewport */
+  width: 30%; /* Adjust the width as necessary */
+  height: 22%; /* Set the height as necessary */
+  position: absolute; /* or 'fixed' if you want it to stay on scroll */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* This will center the content vertically within the header */
+  padding-right: 1%; /* Add padding if you want some space from the right edge */
+  padding-left: 1%; /* Add padding if you want some space from the text to the left */
+  margin-top: 10%; /* Adjust or remove if not needed */
+}
+
+.header-divider {
+  width: 50px; /* Adjust width as necessary */
+  border: 2px solid #f1bd62; /* This sets the color of the line */
+  margin: 4% 0; /* Adjust spacing around the horizontal line */
+}
+
+.header-button {
+  padding: 0px 30px; /* Adjust padding as needed for sizing */
+  background-color: #dea43e; /* Adjust the color to match your design */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 13px;
+  width: 50%;
+  transition: background-color 0.3s ease;
+  font-family: Raleway, sans-serif;
+}
+
+.header-button:hover {
+  background-color: rgb(240, 201, 134); /* Darker shade for hover effect */
+}
+
+.two-container {
+  display: flex;
+  min-height: 70vh;
+  width: 70%;
+  margin-left: 15%; /* Adjusted from 300px to a percentage */
+  overflow: hidden;
+}
+
+.left-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%; /* Adjust if necessary */
+}
+
+.right-container {
+  flex: 1;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: #898989;
+  font-weight: 400;
+  background-color: #fff;
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
+}
+
+.outside-image {
+  width: 100%;
+  height: auto;
+}
+
+.three-container {
+  position: relative; /* Container for the absolute elements */
+  min-height: 75vh;
+  background-image: url("../images/homepic4.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff; /* Change this to the color you want for the text */
+  overflow: hidden;
+}
+
+.home-services-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.title3 {
+  font-size: 3rem; /* Adjust the size as needed */
+  margin-bottom: 2rem; /* Space below the title */
+  font-size: 38px;
+  line-height: 1.2em;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-family: Lustria, serif;
+}
+
+.manicure,
+.pedicure,
+.wax,
+.etc {
+  margin: 2rem;
+  /* Additional styling for service blocks */
+}
+
+.mani-icon,
+.pedi-icon,
+.wax2-icon,
+.etc2-icon {
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+
+.manicure-title,
+.pedicure-title,
+.wax-title,
+.etc-title {
+  font-size: 1.5rem; /* Adjust the size as needed */
+  margin-top: 1rem; /* Space above the service title */
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-family: Lustria, serif;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.manicure-description,
+.pedicure-description,
+.wax-description,
+.etc-description {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  width: 350px;
+  padding: 1rem;
+}
+
+.four-container {
+  min-height: 50vh;
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+.polish-brands {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.dnd-container,
+.essie-container,
+.opi-container {
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-top: 5%;
+}
+
+.five-container {
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-gallery-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
+.g1-container,
+.g2-container,
+.g3-container,
+.g4-container,
+.g5-container {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.g1,
+.g2,
+.g3,
+.g4,
+.g5 {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.six-container {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.six-left-container {
+  width: 20%;
+}
+
+.polish {
+  width: 100%;
+  border-radius: 300px;
+}
+
+.six-right-container {
+  height: 40%;
+  width: 20%;
+  margin-left: 10%;
+}
+
+.six-header {
+  font-size: 38px;
+  line-height: 1.2em;
+  font-weight: 400;
+  letter-spacing: 0;
+  font-family: Lustria, serif;
+  color: rgb(92, 76, 76);
+  vertical-align: baseline;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.six-divider {
+}
+
+.header-six-divider {
+  width: 40px; /* Adjust width as necessary */
+  border: 2px solid #fc9f00; /* This sets the color of the line */
+  margin: 20px 0; /* Adjust spacing around the horizontal line */
+}
+
+.six-promo1 {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: #745f5f;
+  font-weight: 400;
+}
+
+.promo1-date {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: #898989;
+  font-weight: 400;
+  background-color: #fff;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.six-promo2 {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: #745f5f;
+  font-weight: 400;
+  margin-top: 35px;
+}
+
+.promo2-desc,
+.promo2-desc2 {
+  font-family: Raleway, sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+  color: #898989;
+  font-weight: 400;
+  background-color: #fff;
+  overflow-x: hidden !important;
+  -webkit-font-smoothing: antialiased;
+  display: block;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.promo2-desc2 {
+  width: 400px;
+}
+
+@media screen and (max-width: 1750px) {
+  .home-gallery-container,
+  .home-services-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .home-services-container {
+    display: grid;
+  }
+  .polish-brands {
+    flex-direction: column;
+  }
+  .home-gallery-container,
+  .home-services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title3 {
+    margin-top: 8%;
+  }
+  .header {
+    margin-top: 10%;
+    line-height: 3rem;
+    width: 70%;
+
+    margin-right: 5%;
+  }
+  .header-line1,
+  .header-line2 {
+    font-size: 60%;
+  }
+  .header-button {
+    width: 30%;
+    line-height: rem;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .home-services-container {
+    display: grid;
+  }
+  .polish-brands {
+    flex-direction: column;
+  }
+  .home-gallery-container,
+  .home-services-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .title3 {
+    margin-top: 8%;
+  }
+  .header {
+    margin-top: 10%;
+    line-height: 3rem;
+    width: 70%;
+
+    margin-right: 5%;
+  }
+  .header-line1,
+  .header-line2 {
+    font-size: 60%;
+  }
+  .header-button {
+    width: 50%;
+    line-height: rem;
+  }
+  .right-container {
+  }
+  .promo2-desc2 {
+    max-width: 30vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .full-background {
+    background-position: 60% 50%;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo-container {
+    width: 0;
+    z-index: 1000;
+  }
+  .logo {
+    height: 0;
+  }
+  .header {
+    margin-top: 30%;
+    line-height: 3rem;
+    width: 70%;
+    right: auto;
+  }
+  .header-line1,
+  .header-line2 {
+    font-size: 60%;
+  }
+  .header-button {
+    width: 70%;
+    line-height: rem;
+  }
+  .three-container {
+  }
+  .title3 {
+    margin-top: 8%;
+  }
+  .home-services-container {
+    flex-direction: column;
+  }
+  .polish-brands {
+    flex-direction: column;
+  }
+  .opi-container {
+    margin-top: 20%;
+  }
+  .essie-container {
+    margin-bottom: 8%;
+  }
+  .home-gallery-container {
+    display: grid;
+    grid-template-columns: 350px;
+  }
+  .six-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .six-left-container {
+    width: 0%;
+  }
+  .six-right-container {
+    width: 50%;
+  }
+  .promo2-desc2 {
+    max-width: 70vw;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .home-gallery-container,
+  .home-services-container {
+    grid-template-columns: 1fr;
+    margin-top: 10%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .two-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100vw;
+    margin-left: 0;
+    padding: 30px;
+  }
+  .left-container,
+  .right-container {
+    width: 100%; /* Set width to 100% for full width */
+    padding: 0px;
+  }
+  .left-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 350px; /* Set a max-width instead of a fixed width */
+    margin-top: 50px;
+  }
+}

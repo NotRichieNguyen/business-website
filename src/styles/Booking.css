@@ -1,0 +1,53 @@
+.booking-container-1 {
+  position: relative !important; /* Container for the absolute elements */
+  min-height: 55vh;
+  background-image: url("../images/services.avif");
+  background-size: cover;
+  background-position: 100% 20%;
+  background-repeat: no-repeat;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.booking-header {
+  font-weight: 400;
+  letter-spacing: 0;
+  font-family: Lustria, serif;
+  font-size: 80px;
+  margin-bottom: 75px;
+}
+
+.booking-container-2 {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.log-in-container {
+  margin-top: 100px;
+}
+
+.authorize,
+.signout {
+  padding: 20px 30px; /* Adjust padding as needed for sizing */
+  background-color: #dea43e; /* Adjust the color to match your design */
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-size: 13px;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  font-family: Raleway, sans-serif;
+}
+
+.authorize:hover,
+.signout:hover {
+  background-color: rgb(240, 201, 134); /* Darker shade for hover effect */
+}

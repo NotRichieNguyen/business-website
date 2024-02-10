@@ -1,0 +1,124 @@
+.navbar {
+}
+.nav-item {
+  margin-right: 20px;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  margin-left: 22px;
+  font-family: Raleway, sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+  line-height: 23px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  z-index: 100;
+}
+
+.nav-item.active {
+  color: #dea43e;
+}
+
+.nav-item:hover {
+  color: #dea43e;
+  text-decoration: none;
+  cursor: pointer;
+  -webkit-transition: color 0.15s ease-out;
+  -moz-transition: color 0.15s ease-out;
+  transition: color 0.15s ease-out;
+}
+
+.navbar-logo {
+  width: 0;
+}
+
+.menu-toggle {
+  display: none; /* Hidden by default */
+  cursor: pointer;
+  border: none;
+  color: black;
+  font-size: 1.5rem;
+  background-color: #fff;
+  padding: 10px;
+}
+
+.nav-links.open {
+  display: block;
+}
+@media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .menu-toggle-container {
+    /* Adjustments can be made here if necessary */
+  }
+
+  .nav-links {
+    display: none; /* keep nav-links hidden initially */
+    position: absolute; /* Position it absolutely within its relative parent */
+    top: 108%; /* Directly below the navbar */
+    left: 0;
+    right: 0; /* Stretch to the full width of the viewport */
+    background-color: #fff; /* Match the background to your navbar's color */
+    z-index: 99; /* Set z-index to 99 to ensure it's below other items but above the page content */
+    flex-direction: column;
+    align-items: center; /* Center nav-items horizontally */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
+    border-top: 1px solid #ececec; /* Optional: adds a subtle line to separate from the navbar */
+    width: ;
+  }
+
+  .nav-item {
+    color: #8d8d8d; /* Grey color for nav-items */
+    font-size: 12px; /* Smaller font size for mobile */
+    padding: 15px 0; /* Add padding to increase tap area */
+    width: 100%; /* Make nav-items full width */
+    text-align: center; /* Center text */
+    border-bottom: 1px solid #ececec; /* Optional: adds a subtle line between items */
+    margin-right: 0; /* Reset margin-right */
+    margin-left: 0; /* Reset margin-left */
+  }
+
+  .nav-links.open {
+    display: flex; /* Show nav-links when menu is open */
+  }
+
+  .navbar-logo-container {
+    width: 60%; /* Adjust the logo container width as needed */
+  }
+
+  .navbar-logo {
+    width: 100%; /* Adjust the logo width as needed */
+    border-radius: 300px; /* Reset border-radius if needed */
+  }
+}
+
+/* @media (max-width: 700px) {
+  .menu-toggle {
+    display: block;
+  }
+  .menu-toggle-container {
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column; 
+    width: 40%;
+  }
+  .nav-item {
+    color: #8d8d8d;
+    font-size: 12px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+  .navbar-logo-container {
+    width: 30%;
+  }
+  .navbar-logo {
+    width: 100%;
+    border-radius: 300px;
+  }
+} */

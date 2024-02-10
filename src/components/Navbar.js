@@ -1,38 +1,39 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom"; // Import NavLink instead of Link
+import "../styles/NavBar.css"; // Import your CSS file for styles
+import trendiLogo from "../images/trendi.png";
 
-function NavigationBar() {
-return (
-<nav className="navbar navbar-expand-lg bg-body-tertiary">
-    <div className="container-fluid">
-    <Link className="navbar-brand" to="/">Trendi Nails & Facial</Link>
-    <button
-        className="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-    >
-        <span className="navbar-toggler-icon"></span>
-    </button>
-    <div className="collapse navbar-collapse" id="navbarNav">
-        <ul className="navbar-nav">
-        <li className="nav-item">
-            <Link className="nav-link" to="/">Home</Link>
-        </li>
-        <li className="nav-item">
-            <Link className="nav-link" to="/about">About</Link>
-        </li>
-        <li className="nav-item">
-            <Link className="nav-link" to="/contact">Contact</Link>
-        </li>
-        </ul>
-    </div>
-    </div>
-</nav>
-);
+function Navbar() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  }
+
+  return (
+    <nav className="navbar">
+      <div className="menu-toggle-container">
+        <button className="menu-toggle" onClick={toggleMenu}>
+          ☰
+        </button>
+      </div>
+      <div className="navbar-logo-container">
+        <img src={trendiLogo} alt="logo" className="navbar-logo" />
+      </div>
+      <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
+        <NavLink to="/" className="nav-item" activeClassName="active" onClick={closeMenu}>Home</NavLink>
+        <NavLink to="/about" className="nav-item" activeClassName="active" onClick={closeMenu}>About Us</NavLink>
+        <NavLink to="/services" className="nav-item" activeClassName="active" onClick={closeMenu}>Services</NavLink>
+        <NavLink to="/gallery" className="nav-item" activeClassName="active" onClick={closeMenu}>Gallery</NavLink>
+        <NavLink to="/contact" className="nav-item" activeClassName="active" onClick={closeMenu}>Contact</NavLink>
+        <NavLink to="/booking" className="nav-item" activeClassName="active" onClick={closeMenu}>Booking</NavLink>
+      </div>
+    </nav>
+  );
 }
 
-export default NavigationBar;
+export default Navbar;

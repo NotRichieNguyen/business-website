@@ -3,15 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@google-cloud/local-auth": "^2.1.0",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/scrollmagic": "^2.0.8",
     "bootstrap": "^5.3.1",
+    "dotenv": "^16.4.1",
+    "fullcalendar": "^6.1.10",
+    "gapi-client": "^0.0.3",
+    "gapi-script": "^1.2.0",
+    "googleapis": "^105.0.0",
+    "gsap": "^3.12.2",
+    "http-server": "^14.1.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.8.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.15.0",
+    "scrollmagic": "^2.0.8",
     "web-vitals": "^2.1.4"
+  },
+  "globals": {
+    "gapi": "readonly"
   },
   "scripts": {
     "start": "react-scripts start",

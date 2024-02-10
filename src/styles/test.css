@@ -1,0 +1,15 @@
+.test-container {
+  position: relative !important; /* Container for the absolute elements */
+  min-height: 55vh;
+  background-image: url("../images/gallery.jpg");
+  background-size: cover;
+  background-position: 100% 55%;
+  background-repeat: no-repeat;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}

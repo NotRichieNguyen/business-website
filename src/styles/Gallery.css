@@ -1,0 +1,267 @@
+.gallery-container {
+  position: relative !important; /* Container for the absolute elements */
+  min-height: 55vh;
+  background-image: url("../images/test.avif");
+  background-size: cover;
+  background-position: 100% 25%;
+  background-repeat: no-repeat;
+  margin: 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.Gallery {
+  font-weight: 400;
+  letter-spacing: 0;
+  font-family: Lustria, serif;
+  font-size: 80px;
+  margin-bottom: 75px;
+}
+
+.gallery-container-2 {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gallery-images {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  column-gap: 20px;
+  row-gap: 20px;
+  margin: 100px;
+}
+.g6-container,
+.g7-container,
+.g8-container,
+.g9-container,
+.g10-container,
+.g11-container,
+.g12-container,
+.g13-container,
+.g14-container,
+.g15-container,
+.g16-container,
+.g17-container,
+.g18-container,
+.g19-container,
+.g20-container,
+.g21-container {
+  width: 100%;
+  position: relative;
+}
+
+.g6,
+.g7,
+.g8,
+.g9,
+.g10,
+.g11,
+.g12,
+.g13,
+.g14,
+.g15,
+.g16,
+.g17,
+.g18,
+.g19,
+.g20,
+.g21 {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.g6:hover,
+.g7:hover,
+.g8:hover,
+.g9:hover,
+.g10:hover,
+.g11:hover,
+.g12:hover,
+.g13:hover,
+.g14:hover,
+.g15:hover,
+.g16:hover,
+.g17:hover,
+.g18:hover,
+.g19:hover,
+.g20:hover,
+.g21:hover {
+  background-color: gray;
+}
+/* Customize the overlay (background) of the modal */
+.ReactModal__Overlay {
+  /* Customize overlay styles here */
+  background-color: rgb(8, 8, 8); /* Example: semi-transparent background */
+}
+
+/* Customize the modal content */
+.ReactModal__Content {
+  /* Customize modal content styles here */
+  background-color: #000000; /* Example: white background */
+
+  padding: 20px; /* Example: padding for content */
+  border-radius: 4px; /* Example: rounded corners */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Example: shadow effect */
+  max-width: 30%; /* Example: maximum width */
+  max-height: 60%; /* Example: maximum height */
+  margin-left: 33%;
+  margin-top: 7%;
+  overflow-y: auto; /* Allow vertical scrolling if content overflows */
+  text-align: center; /* Example: center align content */
+}
+
+/* Target the image element inside the modal */
+.ReactModal__Content img {
+  /* Apply styles to the image here */
+  max-width: 100%;
+  width: 800px; /* Example: ensure the image doesn't exceed the modal width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Customize the close button */
+/* CSS for positioning the close button at the top right */
+.close-modal-button {
+  position: absolute;
+  top: 10px; /* Adjust the top position as needed */
+  right: 10px; /* Adjust the right position as needed */
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 5px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 3%;
+  right: 2.5%;
+  bottom: 0;
+
+  width: 95%;
+  height: 95%;
+  background-color: transparent; /* Start with a transparent background */
+  transition: background-color 0.3s; /* Smooth transition for the background color */
+  display: flex; /* Use flexbox to center the icon */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  pointer-events: none; /* This allows clicking through the overlay */
+  cursor: pointer;
+}
+
+.magnify-icon {
+  background-color: transparent; /* Ensure the background is transparent */
+  border-radius: 50%; /* Optional: if you want a circular icon */
+  padding: 8px; /* Optional: if you want some space inside the circle */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6); /* Optional: if you want a subtle shadow */
+  transition: opacity 0.3s, transform 0.3s;
+  transform: scale(0);
+  pointer-events: auto; /* Allow pointer events if you want the icon to be clickable */
+}
+
+.g6-container:hover .image-overlay,
+.g7-container:hover .image-overlay,
+.g8-container:hover .image-overlay,
+.g9-container:hover .image-overlay,
+.g10-container:hover .image-overlay,
+.g11-container:hover .image-overlay,
+.g12-container:hover .image-overlay,
+.g13-container:hover .image-overlay,
+.g14-container:hover .image-overlay,
+.g15-container:hover .image-overlay,
+.g16-container:hover .image-overlay,
+.g17-container:hover .image-overlay,
+.g18-container:hover .image-overlay,
+.g19-container:hover .image-overlay,
+.g20-container:hover .image-overlay,
+.g21-container:hover .image-overlay {
+  background-color: rgba(0, 0, 0, 0.7); /* Dark gray background with opacity */
+}
+
+.g6-container:hover .image-overlay .magnify-icon,
+.g7-container:hover .image-overlay .magnify-icon,
+.g8-container:hover .image-overlay .magnify-icon,
+.g9-container:hover .image-overlay .magnify-icon,
+.g10-container:hover .image-overlay .magnify-icon,
+.g11-container:hover .image-overlay .magnify-icon,
+.g12-container:hover .image-overlay .magnify-icon,
+.g13-container:hover .image-overlay .magnify-icon,
+.g14-container:hover .image-overlay .magnify-icon,
+.g15-container:hover .image-overlay .magnify-icon,
+.g16-container:hover .image-overlay .magnify-icon,
+.g17-container:hover .image-overlay .magnify-icon,
+.g18-container:hover .image-overlay .magnify-icon,
+.g19-container:hover .image-overlay .magnify-icon,
+.g20-container:hover .image-overlay .magnify-icon,
+.g21-container:hover .image-overlay .magnify-icon {
+  opacity: 1; /* Icon becomes visible on hover */
+  transform: scale(0.2); /* Scale to normal size for a 'pop' effect */
+}
+
+@media screen and (max-width: 1750px) {
+  .gallery-images {
+    grid-template-columns: repeat(
+      4,
+      300px
+    ); /* Up to 4 images per row for medium-sized screens */
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .gallery-images {
+    grid-template-columns: repeat(
+      3,
+      300px
+    ); /* Up to 3 images per row for smaller screens */
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .gallery-images {
+    grid-template-columns: repeat(
+      2,
+      300px
+    ); /* Up to 2 images per row for even smaller screens */
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .gallery-images {
+    grid-template-columns: 300px; /* Only 1 image per row for small screens */
+  }
+  .ReactModal__Content {
+    max-width: 80vw;
+    width: 80vw;
+    margin-left: 0;
+    margin-top: 30%;
+    max-height: 50vh;
+  }
+}
+
+/* .ReactModal__Content {
+  background-color: #000000; 
+  padding: 20px; 
+  border-radius: 4px; 
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+  max-width: 30%; 
+  max-height: 60%; 
+  margin-left: 33%;
+  margin-top: 7%;
+  overflow-y: auto; 
+  text-align: center; 
+}
+
+
+.ReactModal__Content img {
+  max-width: 100%;
+  width: 800px; 
+  height: auto; 
+} */
