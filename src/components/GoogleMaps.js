@@ -1,18 +1,21 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import '../styles/GoogleMaps.css';
-
-const googleAddress = '5429 Bellaire Blvd a, Bellaire, TX 77401';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
+import "../styles/GoogleMaps.css";
 
 function GoogleMap() {
   const [coordinates, setCoordinates] = useState(null);
 
+  const config = require("../config.json");
+  const googleMapsAPI = config.googleMapAPI;
+  const googleMapsAddress = config.googleMapAddress;
+
   useEffect(() => {
-    
     async function fetchCoordinates() {
       try {
         const response = await axios.get(
-          `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(googleAddress)}&key=AIzaSyDQj7eM6XDBPMolD-u-g0MlhtTkul4COg8`
+          `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
+            googleMapsAddress
+          )}&key=${googleMapsAPI}`
         );
 
         if (response.data.results.length > 0) {
@@ -20,7 +23,7 @@ function GoogleMap() {
           setCoordinates({ lat, lng });
         }
       } catch (error) {
-        console.error('Error fetching coordinates:', error);
+        console.error("Error fetching coordinates:", error);
       }
     }
 
@@ -29,9 +32,8 @@ function GoogleMap() {
 
   useEffect(() => {
     if (coordinates) {
-      
       function initMap() {
-        const map = new window.google.maps.Map(document.getElementById('map'), {
+        const map = new window.google.maps.Map(document.getElementById("map"), {
           center: coordinates,
           zoom: 13,
         });
@@ -39,18 +41,17 @@ function GoogleMap() {
         new window.google.maps.Marker({
           position: coordinates,
           map: map,
-          title: 'Trendi',
+          title: "Trendi",
         });
       }
 
-      
       if (window.google) {
         initMap();
       }
     }
   }, [coordinates]);
 
-  return <div id="map" style={{ width: '100%', height: '90%' }}></div>;
+  return <div id="map" style={{ width: "100%", height: "90%" }}></div>;
 }
 
 export default GoogleMap;

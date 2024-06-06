@@ -1,13 +1,16 @@
+body {
+  overflow-x: hidden;
+}
+
 .full-background {
   position: relative !important; /* Container for the absolute elements */
   min-height: 100vh;
-  background-image: url("../images/homepic2.png");
+  background-image: url("../images/test14.avif");
   background-size: cover;
-  background-position: 100% 78%;
+  background-position: 100% 0%;
   background-repeat: no-repeat;
   margin: 0;
 }
-
 .content {
   /* Styles for your content, such as padding, positioning, etc. */
   padding: 20px;
@@ -63,6 +66,8 @@
   width: 50%;
   transition: background-color 0.3s ease;
   font-family: Raleway, sans-serif;
+  text-align: center;
+  text-decoration: none;
 }
 
 .header-button:hover {

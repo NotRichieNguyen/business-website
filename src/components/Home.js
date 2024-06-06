@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 import "../styles/Home.css";
 import trendiLogo from "../images/trendi.png";
 import trendiOut from "../images/trendioutside.png";
@@ -16,13 +17,35 @@ import g4 from "../images/g4.jpg";
 import g5 from "../images/g5.jpg";
 import polish from "../images/polish.png";
 import End from "./End";
-
-// Client ID: 588942216255-4nnlem9bsaorpmg28o873uupbl5mr2hq.apps.googleusercontent.com
-// Client Secret: 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
-// API key: AIzaSyCNxEdxzx4-sbxM0vu8-0vFSlne-3-WEKY
+import { NavLink } from "react-router-dom";
 
 function Home() {
+  const [promoItems, setPromoItems] = useState([]);
 
+  const SHEET_ID = "13psXwF6jHJqVC_RBjj7A2XI1JuGPfao-tyf2NMKV1EY";
+  const API_KEY = "AIzaSyDAiym4FPJywG3BqJ0bWvjQA40zOKHnd3o";
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        // Fetch data from the first sheet (manicures)
+        const response1 = await axios.get(
+          `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/PROMO?key=${API_KEY}`
+        );
+        const rows1 = response1.data.values;
+        const items1 = rows1.slice(1).map((row) => ({
+          discount: row[0],
+          service: row[1],
+          apply: row[2],
+        }));
+        setPromoItems(items1);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
   return (
     <>
       <div className="full-background">
@@ -34,7 +57,9 @@ function Home() {
             <div className="header-line1">Polish Your Presence</div>
             <div className="header-line2">One Nail at a Time</div>
             <hr className="header-divider" />
-            <button className="header-button">BOOK NOW</button>
+            <NavLink className="header-button" to="/contact">
+              Book Now
+            </NavLink>
           </div>
         </div>
       </div>
@@ -148,32 +173,50 @@ function Home() {
       </div>
       <div className="five-container">
         <div className="home-gallery-container">
-          <div className="g1-container"><img src={g1} alt="g1" className="g1"/></div>
-          <div className="g2-container"><img src={g2} alt="g2" className="g2"/></div>
-          <div className="g3-container"><img src={g3} alt="g3" className="g3"/></div>
-          <div className="g4-container"><img src={g4} alt="g4" className="g4"/></div>
-          <div className="g5-container"><img src={g5} alt="g5" className="g5"/></div>
+          <div className="g1-container">
+            <img src={g1} alt="g1" className="g1" />
+          </div>
+          <div className="g2-container">
+            <img src={g2} alt="g2" className="g2" />
+          </div>
+          <div className="g3-container">
+            <img src={g3} alt="g3" className="g3" />
+          </div>
+          <div className="g4-container">
+            <img src={g4} alt="g4" className="g4" />
+          </div>
+          <div className="g5-container">
+            <img src={g5} alt="g5" className="g5" />
+          </div>
         </div>
       </div>
       <div className="six-container">
-        <div className="six-left-container"><img src={polish} alt="polish" className="polish"/></div>
+        <div className="six-left-container">
+          <img src={polish} alt="polish" className="polish" />
+        </div>
         <div className="six-right-container">
           <div className="six-header">PROMOTIONS</div>
-          <div className="six-divider"><hr className="header-six-divider" /></div>
-          <div className="six-promo1"><strong>Get 10% Off</strong> &nbsp;<em>(On All Services)</em></div>
-          <div className="promo1-date"> Senior (65+), Teachers, Students, Military (Mon-Thur)</div>
-          <div className="six-promo2"><strong>Get 10% Off</strong> &nbsp;<em>(On All Services)</em></div>
-          <div className="promo2-desc">On your birthday</div>
-          <div className="promo2-desc2">Only Applicable for the week of your Birthday & ID is required</div>
+
+          <div className="six-divider">
+            <hr className="header-six-divider" />
+          </div>
+          {promoItems.map((item, index) => (
+            <React.Fragment key={index}>
+              <div className="six-promo1">
+                <strong>{item.discount}</strong> &nbsp;
+                <em>({item.service})</em>
+              </div>
+              <div className="promo1-date">{item.apply}</div>
+            </React.Fragment>
+          ))}
         </div>
       </div>
-      <End/>
+      <End />
     </>
   );
 }
 
 export default Home;
-
 
 // Client ID - 588942216255-7t6fu5i90jnl3i6bilpfo6njrrp7ij9f.apps.googleusercontent.com
 

@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles/Contact.css"; 
+import "../styles/Contact.css";
 import End from "./End";
 import GoogleMap from "./GoogleMaps";
 import facebook from "../images/facebook.jpg";
 import yelp from "../images/yelp.png";
-import instagram from "../images/instagram.jpg"
+import instagram from "../images/instagram.jpg";
 
 function Contact() {
   return (
@@ -30,8 +30,7 @@ function Contact() {
                 <h6>ADDRESS</h6>
               </div>
               <div className="address-bot">
-                5427 Bellaire Blvd Suite A
-                Houston, TX 77401
+                5427 Bellaire Blvd Suite A Houston, TX 77401
               </div>
             </div>
           </div>
@@ -47,9 +46,32 @@ function Contact() {
                 <h6>FOLLOW US!</h6>
               </div>
               <div className="media-bot">
-                <a href="https://www.facebook.com/trendinailsfacial/" target="blank"><img src={facebook} className="facebook-icon" alt="facebook"/></a>
-                <a href="https://www.yelp.com/biz/trendi-nails-and-facial-bellaire" target="blank"><img src={yelp} className="yelp-icon" alt="yelp"/></a>
-                <a href="https://www.instagram.com/trendinailsandfacialtx/" target="blank"><img src={instagram} className="instagram-icon" alt="instagram"/></a>
+                <a
+                  href="https://www.facebook.com/trendinailsfacial/"
+                  target="blank"
+                >
+                  <img
+                    src={facebook}
+                    className="facebook-icon"
+                    alt="facebook"
+                  />
+                </a>
+                <a
+                  href="https://www.yelp.com/biz/trendi-nails-and-facial-bellaire"
+                  target="blank"
+                >
+                  <img src={yelp} className="yelp-icon" alt="yelp" />
+                </a>
+                <a
+                  href="https://www.instagram.com/trendinailsandfacialtx/"
+                  target="blank"
+                >
+                  <img
+                    src={instagram}
+                    className="instagram-icon"
+                    alt="instagram"
+                  />
+                </a>
               </div>
             </div>
           </div>
