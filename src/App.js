@@ -6,7 +6,6 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
-import Booking from "./components/Booking";
 import "../src/App.css";
 
 function App() {
