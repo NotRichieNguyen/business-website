@@ -5,9 +5,8 @@ import "../styles/GoogleMaps.css";
 function GoogleMap() {
   const [coordinates, setCoordinates] = useState(null);
 
-  const config = require("../config.json");
-  const googleMapsAPI = config.googleMapAPI;
-  const googleMapsAddress = config.googleMapAddress;
+  const googleMapsAddress = process.env.REACT_APP_GOOGLE_ADDRESS;
+  const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
   useEffect(() => {
     async function fetchCoordinates() {
@@ -15,7 +14,7 @@ function GoogleMap() {
         const response = await axios.get(
           `https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(
             googleMapsAddress
-          )}&key=${googleMapsAPI}`
+          )}&key=${googleMapAPI}`
         );
 
         if (response.data.results.length > 0) {

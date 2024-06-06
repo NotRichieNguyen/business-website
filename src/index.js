@@ -1,11 +1,30 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+// Function to load Google Maps script
+function loadGoogleMapsScript(apiKey) {
+  const script = document.createElement("script");
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
+}
 
 function Main() {
+  // Ensure the API key is available before rendering
+  React.useEffect(() => {
+    const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+    if (apiKey) {
+      loadGoogleMapsScript(apiKey);
+    } else {
+      console.error("Google Maps API key is not defined");
+    }
+  }, []); // Empty dependency array ensures this runs once on mount
+
   return (
     <React.StrictMode>
       <App />
@@ -13,7 +32,7 @@ function Main() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<Main />);
 
 reportWebVitals();

@@ -7,6 +7,14 @@ import yelp from "../images/yelp.png";
 import instagram from "../images/instagram.jpg";
 
 function Contact() {
+  const config = require("../config.json");
+  const phone = config.phone;
+  const address = config.googleMapAddress;
+  const email = config.email;
+  const facebookLink = config.facebook;
+  const yelpLink = config.yelp;
+  const instagramLink = config.instagram;
+
   return (
     <div className="contact-root">
       <div className="contact-container-1">
@@ -23,15 +31,13 @@ function Contact() {
               <div className="phone-top">
                 <h6>PHONE</h6>
               </div>
-              <div className="phone-bot">(713) 828-5110</div>
+              <div className="phone-bot">{phone}</div>
             </div>
             <div className="address-container">
               <div className="address-top">
                 <h6>ADDRESS</h6>
               </div>
-              <div className="address-bot">
-                5427 Bellaire Blvd Suite A Houston, TX 77401
-              </div>
+              <div className="address-bot">{address}</div>
             </div>
           </div>
           <div className="contact-bot">
@@ -39,33 +45,24 @@ function Contact() {
               <div className="email-top">
                 <h6>EMAIL</h6>
               </div>
-              <div className="email-bot">trendinailsfacial@gmail.com</div>
+              <div className="email-bot">{email}</div>
             </div>
             <div className="media-container">
               <div className="media-top">
                 <h6>FOLLOW US!</h6>
               </div>
               <div className="media-bot">
-                <a
-                  href="https://www.facebook.com/trendinailsfacial/"
-                  target="blank"
-                >
+                <a href={facebookLink} target="blank">
                   <img
                     src={facebook}
                     className="facebook-icon"
                     alt="facebook"
                   />
                 </a>
-                <a
-                  href="https://www.yelp.com/biz/trendi-nails-and-facial-bellaire"
-                  target="blank"
-                >
+                <a href={yelpLink} target="blank">
                   <img src={yelp} className="yelp-icon" alt="yelp" />
                 </a>
-                <a
-                  href="https://www.instagram.com/trendinailsandfacialtx/"
-                  target="blank"
-                >
+                <a href={instagramLink} target="blank">
                   <img
                     src={instagram}
                     className="instagram-icon"
