@@ -7,7 +7,7 @@ function GoogleMap() {
 
   const googleMapsAddress = process.env.REACT_APP_GOOGLE_ADDRESS;
   const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-
+  console.log(googleMapAPI);
   useEffect(() => {
     async function fetchCoordinates() {
       try {
