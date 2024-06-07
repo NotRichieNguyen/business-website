@@ -1,7 +1,5 @@
-// GoogleMap.js
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import { loadGoogleMapsScript } from "../utils/loadGoogleMapsScript";
 import "../styles/GoogleMaps.css";
 
 function GoogleMap() {
@@ -9,8 +7,8 @@ function GoogleMap() {
 
   const googleMapsAddress = process.env.REACT_APP_GOOGLE_ADDRESS;
   const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+  console.log("Back to original");
   console.log(googleMapAPI);
-
   useEffect(() => {
     async function fetchCoordinates() {
       try {
@@ -30,27 +28,28 @@ function GoogleMap() {
     }
 
     fetchCoordinates();
-  }, [googleMapsAddress, googleMapAPI]);
+  }, []);
 
   useEffect(() => {
     if (coordinates) {
-      loadGoogleMapsScript(googleMapAPI, initMap);
+      function initMap() {
+        const map = new window.google.maps.Map(document.getElementById("map"), {
+          center: coordinates,
+          zoom: 13,
+        });
+
+        new window.google.maps.Marker({
+          position: coordinates,
+          map: map,
+          title: "Trendi",
+        });
+      }
+
+      if (window.google) {
+        initMap();
+      }
     }
-  }, [coordinates, googleMapAPI]);
-
-  // Callback function to initialize the map
-  function initMap() {
-    const map = new window.google.maps.Map(document.getElementById("map"), {
-      center: coordinates,
-      zoom: 13,
-    });
-
-    new window.google.maps.Marker({
-      position: coordinates,
-      map: map,
-      title: "Trendi",
-    });
-  }
+  }, [coordinates]);
 
   return <div id="map" style={{ width: "100%", height: "90%" }}></div>;
 }
