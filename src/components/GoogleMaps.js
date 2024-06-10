@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/GoogleMaps.css";
 
+const config = require("../config.json");
+const googleMapsAddress = config.googleMapAddress;
+const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+
 function GoogleMap() {
   const [coordinates, setCoordinates] = useState(null);
 
-  const googleMapsAddress = process.env.REACT_APP_GOOGLE_ADDRESS;
-  const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
-  console.log("Back to original");
-  console.log(googleMapAPI);
   useEffect(() => {
     async function fetchCoordinates() {
       try {

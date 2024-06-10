@@ -11,11 +11,12 @@ function loadGoogleMapsScript(apiKey) {
   script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
   script.async = true;
   script.defer = true;
+
+  console.log("index.js: Loading google maps script", script);
   document.head.appendChild(script);
 }
 
 function Main() {
-  // Ensure the API key is available before rendering
   React.useEffect(() => {
     const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
     if (apiKey) {
@@ -23,7 +24,7 @@ function Main() {
     } else {
       console.error("Google Maps API key is not defined");
     }
-  }, []); // Empty dependency array ensures this runs once on mount
+  }, []);
 
   return (
     <React.StrictMode>
