@@ -11,8 +11,6 @@ function loadGoogleMapsScript(apiKey) {
   script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
   script.async = true;
   script.defer = true;
-
-  console.log("index.js: Loading google maps script", script);
   document.head.appendChild(script);
 }
 
