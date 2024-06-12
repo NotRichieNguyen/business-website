@@ -51,6 +51,8 @@ function GoogleMap() {
     }
   }, [coordinates]);
 
+  console.clear();
+
   return <div id="map" style={{ width: "100%", height: "90%" }}></div>;
 }
 

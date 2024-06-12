@@ -104,27 +104,27 @@ function Home() {
           </p>
         </div>
       </div>
-      <div class="three-container">
-        <div class="title3">Our Services</div>
+      <div className="three-container">
+        <div className="title3">Our Services</div>
         <div className="home-services-container">
-          <div class="manicure" id="manicure">
-            <div class="manicure-icon">
+          <div className="manicure" id="manicure">
+            <div className="manicure-icon">
               <img src={mani} alt="mani" className="mani-icon" />
             </div>
-            <div class="manicure-title">MANICURE</div>
-            <div class="manicure-description">
+            <div className="manicure-title">MANICURE</div>
+            <div className="manicure-description">
               Begin with a trimming, filing, and shaping of your nails, followed
               by cuticle care to neaten the nail beds. A relaxing hand massage
               precedes the final flourish: a nail polish application in your
               preferred hue.
             </div>
           </div>
-          <div class="pedicure" id="pedicure">
-            <div class="pedicure-icon">
+          <div className="pedicure" id="pedicure">
+            <div className="pedicure-icon">
               <img src={pedi} alt="pedi" className="pedi-icon" />
             </div>
-            <div class="pedicure-title">PEDICURE</div>
-            <div class="pedicure-description">
+            <div className="pedicure-title">PEDICURE</div>
+            <div className="pedicure-description">
               Experience a full-service pedicure starting with nail shaping and
               meticulous cuticle attention, complemented by a hydrating massage
               for feet and calves. Rough skin is smoothed away with a
@@ -132,24 +132,24 @@ function Home() {
               you desire and a quick-set top coat for longevity.
             </div>
           </div>
-          <div class="wax" id="wax">
-            <div class="wax-icon">
+          <div className="wax" id="wax">
+            <div className="wax-icon">
               <img src={wax} alt="wax" className="wax2-icon" />
             </div>
-            <div class="wax-title">WAX</div>
-            <div class="wax-description">
+            <div className="wax-title">WAX</div>
+            <div className="wax-description">
               The waxing treatment involves applying a specially formulated
               sticky substance to the skin that grips unwanted hair. This method
               ensures hair is pulled from the root when the wax is removed,
               resulting in a smoother finish.
             </div>
           </div>
-          <div class="etc" id="etc">
-            <div class="etc-icon">
+          <div className="etc" id="etc">
+            <div className="etc-icon">
               <img src={etc} alt="etc" className="etc2-icon" />
             </div>
-            <div class="etc-title">ETC</div>
-            <div class="etc-description">
+            <div className="etc-title">ETC</div>
+            <div className="etc-description">
               Nails are a reflection of personal style, much like skin and hair.
               Embrace the exploration of various nail enhancements to discover
               the perfect match that complements your unique lifestyle and

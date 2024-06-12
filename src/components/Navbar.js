@@ -28,7 +28,7 @@ function Navbar() {
         <NavLink
           to="/"
           className="nav-item"
-          activeClassName="active"
+          // activeClassName="active"
           onClick={closeMenu}
         >
           Home
@@ -36,7 +36,7 @@ function Navbar() {
         <NavLink
           to="/about"
           className="nav-item"
-          activeClassName="active"
+          // activeClassName="active"
           onClick={closeMenu}
         >
           About Us
@@ -44,7 +44,7 @@ function Navbar() {
         <NavLink
           to="/services"
           className="nav-item"
-          activeClassName="active"
+          // activeClassName="active"
           onClick={closeMenu}
         >
           Services
@@ -52,7 +52,7 @@ function Navbar() {
         <NavLink
           to="/gallery"
           className="nav-item"
-          activeClassName="active"
+          // activeClassName="active"
           onClick={closeMenu}
         >
           Gallery
@@ -60,7 +60,7 @@ function Navbar() {
         <NavLink
           to="/contact"
           className="nav-item"
-          activeClassName="active"
+          // activeClassName="active"
           onClick={closeMenu}
         >
           Contact
