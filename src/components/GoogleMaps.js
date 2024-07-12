@@ -3,8 +3,12 @@ import axios from "axios";
 import "../styles/GoogleMaps.css";
 
 const config = require("../config.json");
+
 const googleMapsAddress = config.googleMapAddress;
-const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY_4;
+
+// REACT_APP_GOOGLE_MAPS_API_KEY
+// REACT_APP_GOOGLE_SHEETS_API_KEY
 
 function GoogleMap() {
   const [coordinates, setCoordinates] = useState(null);
@@ -52,6 +56,7 @@ function GoogleMap() {
   }, [coordinates]);
 
   console.clear();
+  console.log(googleMapAPI);
 
   return <div id="map" style={{ width: "100%", height: "90%" }}></div>;
 }

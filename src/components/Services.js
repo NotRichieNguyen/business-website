@@ -16,7 +16,7 @@ function Services() {
 
   const config = require("../config.json");
   const SHEET_ID = config.googleSheetsSHEETID;
-  const API_KEY = process.env.REACT_APP_GOOGLE_SHEETS_API_KEY;
+  const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY_4;
 
   useEffect(() => {
     const fetchData = async () => {

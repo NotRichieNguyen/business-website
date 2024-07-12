@@ -22,8 +22,8 @@ import { NavLink } from "react-router-dom";
 function Home() {
   const [promoItems, setPromoItems] = useState([]);
 
-  const SHEET_ID = "13psXwF6jHJqVC_RBjj7A2XI1JuGPfao-tyf2NMKV1EY";
-  const API_KEY = "AIzaSyDAiym4FPJywG3BqJ0bWvjQA40zOKHnd3o";
+  const SHEET_ID = process.env.REACT_APP_GOOGLE_SHEETS_SHEET_ID;
+  const API_KEY = process.env.REACT_APP_GOOGLE_SHEETS_API_KEY;
 
   useEffect(() => {
     const fetchData = async () => {
