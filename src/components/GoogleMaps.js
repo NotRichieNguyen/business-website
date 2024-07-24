@@ -55,8 +55,8 @@ function GoogleMap() {
     }
   }, [coordinates]);
 
-  console.clear();
-  console.log("1");
+  // console.clear();
+  console.log("2");
 
   return <div id="map" style={{ width: "100%", height: "90%" }}></div>;
 }
