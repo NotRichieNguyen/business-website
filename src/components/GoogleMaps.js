@@ -56,7 +56,7 @@ function GoogleMap() {
   }, [coordinates]);
 
   console.clear();
-  console.log(googleMapAPI);
+  console.log("1");
 
   return <div id="map" style={{ width: "100%", height: "90%" }}></div>;
 }
