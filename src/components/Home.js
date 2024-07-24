@@ -217,7 +217,3 @@ function Home() {
 }
 
 export default Home;
-
-// Client ID - 588942216255-7t6fu5i90jnl3i6bilpfo6njrrp7ij9f.apps.googleusercontent.com
-
-// Client Secret - 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

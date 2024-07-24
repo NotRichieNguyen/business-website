@@ -19,7 +19,6 @@ function Main() {
     const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY_4;
     if (apiKey) {
       loadGoogleMapsScript(apiKey);
-      console.log("index.js: ", apiKey);
     } else {
       console.error("Google Maps API key is not defined in index.js");
     }
