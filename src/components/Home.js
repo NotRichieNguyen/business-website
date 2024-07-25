@@ -24,6 +24,7 @@ function Home() {
 
   const SHEET_ID = process.env.REACT_APP_GOOGLE_SHEETS_SHEET_ID;
   const API_KEY = process.env.REACT_APP_GOOGLE_SHEETS_API_KEY_4;
+  console.log(API_KEY);
 
   useEffect(() => {
     const fetchData = async () => {
