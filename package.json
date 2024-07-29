@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3000",
+  "homepage": ".",
   "dependencies": {
     "@google-cloud/local-auth": "^2.1.0",
     "@react-google-maps/api": "^2.19.3",
