@@ -24,7 +24,7 @@ function Home() {
 
   const SHEET_ID = process.env.REACT_APP_GOOGLE_SHEETS_SHEET_ID;
   const API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY_4;
-  console.log("HOME:", API_KEY);
+
   //275620889275-npqk7jv63cuqn5f8gmbsasv26n97m133.apps.googleusercontent.com
 
   useEffect(() => {
