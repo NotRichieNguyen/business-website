@@ -82,7 +82,8 @@ function Home() {
               color: "#dea43e",
             }}
           >
-            {config.title} - Your Destination for Elite Nail and Beauty Care
+            {process.env.REACT_APP_title} - Your Destination for Elite Nail and
+            Beauty Care
           </h2>
           <p></p>
           <p></p>

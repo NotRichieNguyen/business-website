@@ -22,12 +22,12 @@ function About() {
           </div>
           <div className="about-description">
             <p>
-              {config.title} welcomes you to a place where beauty and elegance
-              are redefined with every manicure and pedicure. In Houston's busy
-              streets, we stand out as a premium nail salon that combines modern
-              and traditional techniques. Our licensed technicians are not just
-              skilled; they're artistswho ensure that your nail service is a
-              memorable experience.
+              {process.env.REACT_APP_title} welcomes you to a place where beauty
+              and elegance are redefined with every manicure and pedicure. In
+              Houston's busy streets, we stand out as a premium nail salon that
+              combines modern and traditional techniques. Our licensed
+              technicians are not just skilled; they're artistswho ensure that
+              your nail service is a memorable experience.
             </p>
             <p>
               We take pride in our sterile environment and high-quality products
@@ -35,7 +35,7 @@ function About() {
             </p>
             <p>
               Discover your nails' potential ~ your seat awaits at{" "}
-              {config["short-title"]} Nails!
+              {process.env.REACT_APP_short_title} Nails!
             </p>
           </div>
         </div>

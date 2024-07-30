@@ -5,9 +5,9 @@ import GoogleMap from "./GoogleMaps";
 
 function End() {
   const config = require("../config.json");
-  const phone = config.phone;
-  const address = config.googleMapAddress;
-  const email = config.email;
+  const phone = process.env.REACT_APP_phone;
+  const address = process.env.REACT_APP_googleMapAddress;
+  const email = process.env.REACT_APP_email;
   const weekday = config["weekday-hours"];
   const weekend = config["weekend-hours"];
 
@@ -37,8 +37,8 @@ function End() {
         </div>
       </div>
       <div className="end-bottom">
-        {config.title} - {config["short-title"]}@2024. All Rights Reserved -
-        Designed by Richie N.
+        {process.env.REACT_APP_title} - {process.env.REACT_APP_short_title}
+        @2024. All Rights Reserved - Designed by Richie N.
       </div>
     </div>
   );

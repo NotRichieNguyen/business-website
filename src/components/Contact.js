@@ -8,12 +8,12 @@ import instagram from "../images/instagram.jpg";
 
 function Contact() {
   const config = require("../config.json");
-  const phone = config.phone;
-  const address = config.googleMapAddress;
-  const email = config.email;
-  const facebookLink = config.facebook;
-  const yelpLink = config.yelp;
-  const instagramLink = config.instagram;
+  const phone = process.env.REACT_APP_phone;
+  const address = process.env.REACT_APP_googleMapAddress;
+  const email = process.env.REACT_APP_email;
+  const facebookLink = process.env.REACT_APP_facebook;
+  const yelpLink = process.env.REACT_APP_yelp;
+  const instagramLink = process.env.REACT_APP_instagram;
 
   return (
     <div className="contact-root">
