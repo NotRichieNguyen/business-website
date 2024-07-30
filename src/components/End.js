@@ -11,8 +11,6 @@ function End() {
   const weekday = config.weekday_hours;
   const weekend = config.weekend_hours;
 
-  console.log(weekday, weekend);
-
   return (
     <div className="end-container">
       <div className="end-top">

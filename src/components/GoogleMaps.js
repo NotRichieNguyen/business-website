@@ -42,7 +42,7 @@ function GoogleMap() {
         new window.google.maps.Marker({
           position: coordinates,
           map: map,
-          title: "Trendi",
+          title: process.env.REACT_APP_short_title,
         });
       }
 
@@ -52,7 +52,7 @@ function GoogleMap() {
     }
   }, [coordinates]);
 
-  // console.clear();
+  console.clear();
 
   return <div id="map" style={{ width: "100%", height: "90%" }}></div>;
 }

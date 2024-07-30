@@ -8,11 +8,17 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Gallery from "./components/Gallery";
 import Contact from "./components/Contact";
+import { Helmet } from "react-helmet";
 import "../src/App.css";
 
 function App() {
+  const title = process.env.REACT_APP_title || "Nails";
+  console.log(title);
   return (
     <Router>
+      <Helmet>
+        <title>{title}</title>
+      </Helmet>
       <div className="navbar-container">
         <Navbar />
       </div>
