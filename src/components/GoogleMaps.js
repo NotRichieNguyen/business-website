@@ -4,7 +4,7 @@ import "../styles/GoogleMaps.css";
 
 const config = require("../config.json");
 
-const googleMapsAddress = config.googleMapAddress;
+const googleMapsAddress = process.env.REACT_APP_googleMapAddress;
 const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY_4;
 
 function GoogleMap() {
