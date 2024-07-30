@@ -8,8 +8,10 @@ function End() {
   const phone = process.env.REACT_APP_phone;
   const address = process.env.REACT_APP_googleMapAddress;
   const email = process.env.REACT_APP_email;
-  const weekday = process.env.REACT_APP_weekday_hours;
-  const weekend = process.env.REACT_APP_weekend_hours;
+  const weekday = config.weekday_hours;
+  const weekend = config.weekend_hours;
+
+  console.log(weekday, weekend);
 
   return (
     <div className="end-container">
