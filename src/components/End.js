@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/End.css";
-import trendiLogo from "../images/trendi.png";
+import Logo from "../images/business.png";
 import GoogleMap from "./GoogleMaps";
 
 function End() {
@@ -16,7 +16,7 @@ function End() {
       <div className="end-top">
         <div className="end-top-1">
           <div className="end-top-1-line1">
-            <img src={trendiLogo} className="logo" alt="Trendi Logo" />
+            <img src={Logo} className="logo" alt="business Logo" />
           </div>
           <div className="end-top-1-line2">Elegance at Your Fingertips.</div>
           <div className="end-top-1-line3">{phone}</div>
@@ -37,8 +37,8 @@ function End() {
         </div>
       </div>
       <div className="end-bottom">
-        Trendi Nails & Facial - Trendi@2024. All Rights Reserved - Designed by
-        Richie N.
+        {config.title} - {config["short-title"]}@2024. All Rights Reserved -
+        Designed by Richie N.
       </div>
     </div>
   );

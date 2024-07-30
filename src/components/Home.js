@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/Home.css";
-import trendiLogo from "../images/trendi.png";
-import trendiOut from "../images/trendioutside.png";
+import Logo from "../images/business.png";
+import Out from "../images/businessoutside.png";
 import mani from "../images/mani.png";
 import pedi from "../images/pedi.png";
 import wax from "../images/wax.png";
@@ -20,6 +20,7 @@ import End from "./End";
 import { NavLink } from "react-router-dom";
 
 function Home() {
+  const config = require("../config.json");
   const [promoItems, setPromoItems] = useState([]);
 
   const SHEET_ID = process.env.REACT_APP_GOOGLE_SHEETS_SHEET_ID;
@@ -51,7 +52,7 @@ function Home() {
       <div className="full-background">
         <div className="content">
           <div className="logo-container">
-            <img src={trendiLogo} className="logo" alt="Trendi Logo" />
+            <img src={Logo} className="logo" alt="T" />
           </div>
           <div className="header">
             <div className="header-line1">Polish Your Presence</div>
@@ -66,7 +67,7 @@ function Home() {
       <div className="two-container">
         <div className="left-container">
           <img
-            src={trendiOut}
+            src={Out}
             className="outside-image"
             alt="Outside view of salon"
           />
@@ -81,8 +82,7 @@ function Home() {
               color: "#dea43e",
             }}
           >
-            Trendi Nails & Facial - Your Destination for Elite Nail and Beauty
-            Care
+            {config.title} - Your Destination for Elite Nail and Beauty Care
           </h2>
           <p></p>
           <p></p>

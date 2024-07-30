@@ -21,6 +21,7 @@ import magnify from "../images/magnify.jpg";
 import Modal from "react-modal";
 
 function Gallery() {
+  const config = require("../config.json");
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [currentImg, setCurrentImg] = useState("");
 

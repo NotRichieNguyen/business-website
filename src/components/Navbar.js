@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/NavBar.css";
-import trendiLogo from "../images/trendi.png";
+import Logo from "../images/business.png";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +22,7 @@ function Navbar() {
         </button>
       </div>
       <div className="navbar-logo-container">
-        <img src={trendiLogo} alt="logo" className="navbar-logo" />
+        <img src={Logo} alt="logo" className="navbar-logo" />
       </div>
       <div className={`nav-links ${isMenuOpen ? "open" : ""}`}>
         <NavLink
