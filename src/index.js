@@ -8,7 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Function to load Google Maps script
 function loadGoogleMapsScript(apiKey) {
   const script = document.createElement("script");
-  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&loading=async&callback=initMap`;
+  script.src = `https://maps.googleapis.com/maps/api/js?v=3.34&key=${apiKey}&loading=async&callback=initMap`;
+  // ...//maps.googleapis.com/maps/api/js?key.... to ...//maps.googleapis.com/maps/api/js?v=3.34&key...
   script.async = true;
   script.defer = true;
   document.head.appendChild(script);
