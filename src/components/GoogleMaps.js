@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import "../styles/GoogleMaps.css";
 
-const config = require("../config.json");
-
 const googleMapsAddress = process.env.REACT_APP_googleMapAddress;
 const googleMapAPI = process.env.REACT_APP_GOOGLE_MAPS_API_KEY_4;
 
@@ -33,7 +31,7 @@ function GoogleMap() {
 
   useEffect(() => {
     if (coordinates) {
-      function initMap() {
+      window.initMap = function () {
         const map = new window.google.maps.Map(document.getElementById("map"), {
           center: coordinates,
           zoom: 13,
@@ -44,15 +42,13 @@ function GoogleMap() {
           map: map,
           title: process.env.REACT_APP_short_title,
         });
-      }
+      };
 
-      if (window.google) {
-        initMap();
+      if (window.google && window.google.maps) {
+        window.initMap();
       }
     }
   }, [coordinates]);
-
-  console.clear();
 
   return <div id="map" style={{ width: "100%", height: "90%" }}></div>;
 }

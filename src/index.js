@@ -8,8 +8,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // Function to load Google Maps script
 function loadGoogleMapsScript(apiKey) {
   const script = document.createElement("script");
-  script.src = `https://maps.googleapis.com/maps/api/js?v=3.34&key=${apiKey}&loading=async&callback=initMap`;
-  // ...//maps.googleapis.com/maps/api/js?key.... to ...//maps.googleapis.com/maps/api/js?v=3.34&key...
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
   script.async = true;
   script.defer = true;
   document.head.appendChild(script);
@@ -19,6 +18,7 @@ function Main() {
   React.useEffect(() => {
     const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY_4;
     if (apiKey) {
+      window.initMap = () => {}; // Dummy function to handle the callback
       loadGoogleMapsScript(apiKey);
     } else {
       console.error("Google Maps API key is not defined in index.js");
