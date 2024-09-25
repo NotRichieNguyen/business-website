@@ -195,7 +195,8 @@ function Services() {
       </div>
       <div className="services-container-5">
         <div className="service-header">
-          <h1>ADD - ONS / CHILDREN</h1> <h6>(Under 10 yrs)</h6>
+          <h1 style={{ marginRight: "8px" }}>ADD - ONS / CHILDREN</h1>{" "}
+          <h6 style={{ marginLeft: "8px" }}>(Under 10 yrs)</h6>
         </div>
         <div className="services-list">
           {response4Items.map((item, index) => (

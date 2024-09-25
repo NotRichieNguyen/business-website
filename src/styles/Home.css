@@ -361,6 +361,12 @@ body {
   .home-services-container {
     grid-template-columns: repeat(2, 1fr);
   }
+  .home-gallery-container {
+    margin-top: 50px;
+  }
+  .essie-container {
+    margin-bottom: 60px;
+  }
   .title3 {
     margin-top: 8%;
   }

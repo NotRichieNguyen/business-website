@@ -144,6 +144,36 @@
   align-items: center;
 }
 
+@media screen and (max-width: 1400px) {
+  .end-container {
+    width: 100vw;
+    min-height: 130vh;
+    background-color: #8f8f8f;
+  }
+  .end-top {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .end-top-1 {
+    width: 100%;
+  }
+  .end-top-2-line1 {
+    margin-bottom: 7%;
+  }
+  .end-top-2-line2 {
+  }
+  .end-top-2-line3 {
+  }
+  .end-top-3-line2 {
+    width: 150%;
+    height: 250px;
+  }
+  .end-bottom {
+    font-size: 0.5rem;
+  }
+}
+
 @media screen and (max-width: 1300px) {
   .end-container {
     width: 100vw;
